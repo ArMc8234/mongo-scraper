@@ -2,22 +2,19 @@
 $("#scrape").on("click",  function(){
   event.preventDefault();
   scrapeContent();
+  // alert("Content Scraped");
+  // if("Content Scraped"){
+  //   displayContent()
+  // }
 })
-
-displayContent();
-
-
- 
 
 
 function scrapeContent(){
   $.ajax({
     method: "GET",
     url: "/scrape" 
-  }) 
+  })
 };
-
-
 
 $("#scrapeModalClose").on("click", function(){
   displayContent();
@@ -29,7 +26,7 @@ function displayContent(){
       for (var i = 0; i < data.length; i++) {
         // Display the apropos information on the page
         $("#articles").append(
-          "<div class='card' data-id='" + data[i]._id + "'><h5 class='card-header'>" + data[i].title + "</h5><div class='card-body'>" + "<a href='" + data[i].link + "'>View Story</a></div></div><br/>"
+          "<div class='card' data-id='" + data[i]._id + "'><h5 class='card-header'>" + data[i].title + "<button type='button' class='btn btn-secondary pull-right'>Close</button><button type='button' class='btn btn-primary pull-right'>Save changes</button></h5><div class='card-body'>" + "<a href='" + data[i].link + "'>View Story</a></div></div><br/>"
         );
       }
     });
