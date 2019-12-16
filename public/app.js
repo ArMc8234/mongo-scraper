@@ -3,9 +3,9 @@ $("#scrape").on("click",  function(){
   event.preventDefault();
   scrapeContent();
   // alert("Content Scraped");
-  // if("Content Scraped"){
-  //   displayContent()
-  // }
+  if("Content Scraped"){
+    displayContent()
+  }
 })
 
 
@@ -16,9 +16,9 @@ function scrapeContent(){
   })
 };
 
-$("#scrapeModalClose").on("click", function(){
-  displayContent();
-});
+// $("#scrapeModalClose").on("click", function(){
+//   displayContent();
+// });
 
 function displayContent(){
   $.getJSON("/articles", function(data) {
