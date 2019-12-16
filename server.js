@@ -36,8 +36,11 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
+//If deployerd, use the deployed database, Otherwise, use the local database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/un";
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/un", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/un", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 // Routes
 
