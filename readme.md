@@ -1,6 +1,6 @@
 # Mongo Scraper (Richmond Times-Dispatch Edition)
 
-![Scraper_Demo] (./public/images/mongo_scraper_demo.gif)
+![Scraper_Demo](./public/images/mongo_scraper_demo.gif)
 
 https://calm-hamlet-46677.herokuapp.com/
 
